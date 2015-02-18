@@ -11,19 +11,23 @@ var Account = {
 
 
 $(function() {
+  $("#image").html("<img class='pic' src='img/bg.jpg'>");
   var account = 0;
   $("form#sign-up").submit(function(event){
+    $("#image").empty();
     var moniker = $("input#moniker").val();
     var initialDeposit = parseInt($("input#initialDeposit").val());
     var account = Object.create(Account);
     account.moniker = moniker;
     account.balance = initialDeposit;
-    $(".balance").text(account.balance);
     $("input#moniker").val("");
     $("input#initialDeposit").val("");
     $(".balance").text(account.balance);
+    $("#image").html("<img class='pic' src='img/banker.jpg'>");
+
 
     $("form#transact").submit(function(event){
+
       $(".balance").empty();
       var credit = parseInt($("input#deposit").val()) || 0;
       var debit = parseInt($("input#withdraw").val()) || 0;
