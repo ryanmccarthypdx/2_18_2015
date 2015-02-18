@@ -1,0 +1,57 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+  <title>Tamagotchi</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-1.11.2.js"></script>
+  <script src="js/tamagotchi_scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Tamagotchi</h1>
+    <div class="row">
+      <div class="col-sm-12">
+        <form id="input">
+            <label for="name">Create a new Tamagotchi:</label>
+            <input id="name" type="text" placeholder="Enter name here">
+          <button type="submit" class="btn-xs btn-danger">Give birth!</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="name-pic">
+        <h1><span class="inputted-name"></span></h1>
+        <span id="picture"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="alive">
+        <div class="col-xs-4">
+          <h1><span id="food-level"></span></h1>
+          <form id="feed">
+            <button type="submit" class="btn btn-success" value="feed">Dinnertime!</button>
+          </form>
+        </div>
+        <div class="col-xs-4">
+          <h1><span id="sleep-level"></span></h1>
+          <form id="sleep">
+            <button type="submit" class="btn btn-primary" value="sleep">Bedtime!</button>
+          </form>
+        </div>
+        <div class="col-xs-4">
+          <h1><span id="play-level"></span></h1>
+          <form id="play">
+            <button type="submit" class="btn btn-warning" value="play">Playtime!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="dead">
+        <h1><span class="inputted-name"></span> died!</h1>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
