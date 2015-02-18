@@ -13,6 +13,7 @@ var Account = {
 $(function() {
   var alerted = false;
   var vladimired = false;
+  var nikoed = false;
   $("#balance").hide();
   $("#image").html("<img class='pic' src='img/bg.jpg'>");
   var account = 0;
@@ -51,7 +52,14 @@ $(function() {
     });
 
     setInterval(function() {
-      account.withdraw(parseInt(account.balance) * 0.049);
+      account.withdraw(Math.abs(parseInt(account.balance)) * 0.049);
+      if (account.balance < 0) {
+        if (nikoed === false) {
+          alert("You are overdrawn! This is bad, my friend: Niko is very upset, I give him $500 to calm him down")
+          nikoed = true
+        }
+        account.withdraw(500);
+      }
       if (alerted === false) {
         alert("All akount is subjeck to 4.9% minutely APRs")
         alerted = true;
