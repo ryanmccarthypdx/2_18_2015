@@ -3,7 +3,8 @@ describe('Account', function() {
     it("adds money to a bank account", function() {
       var testAccount = Object.create(Account);
       testAccount.deposit(500);
-      expect(testAccount.balance).to.equal(500);
+      testAccount.deposit(1);
+      expect(testAccount.balance).to.equal(501);
     });
   });
 

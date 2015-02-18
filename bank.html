@@ -6,7 +6,7 @@
       <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
       <link href="css/styles.css" rel="stylesheet" type="text/css">
       <script src="js/jquery-1.11.2.js"></script>
-      <script src="js/scripts.js"></script>
+      <script src="js/bank-scripts.js"></script>
   </head>
   <body>
     <div class="container-fluid ryan_is_trash">
@@ -22,10 +22,10 @@
             <form id="sign-up">
               <h3>Create a new account</h3>
               <div class="form-group">
-                <input type="text" name="name" placeholder="Name">
+                <input type="text" id="moniker" placeholder="Name">
               </div>
               <div class="form-group">
-                <input type="number" name="name" placeholder="Initial Deposit">
+                <input type="text" id="initialDeposit" placeholder="Initial Deposit">
               </div>
               <button type="submit" class="btn btn-success">Create Bank Account</button>
             </form>
@@ -34,10 +34,10 @@
           <form id="transact">
             <h3>Deposit or withdraw money:</h3>
             <div class="form-group">
-              <input type="number" name="deposit" placeholder="Deposit Amount">
+              <input type="text" id="deposit" placeholder="Deposit Amount">
             </div>
             <div class="form-group">
-              <input type="number" name="withdraw" placeholder="Withdraw Amount">
+              <input type="text" id="withdraw" placeholder="Withdraw Amount">
             </div>
             <button type="submit" class="btn btn-success">Transact!</button>
           </form>
