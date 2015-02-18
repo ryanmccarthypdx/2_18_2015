@@ -27,13 +27,14 @@ $(function() {
     account.balance = initialDeposit;
     $("input#moniker").val("");
     $("input#initialDeposit").val("");
-    $("#balance").text(account.balance);
+    $(".balance").text(account.balance);
+    $("#balance").show();
     $("#image").html("<img class='pic' src='img/banker.jpg'>");
 
 
     $("form#transact").submit(function(event){
       event.preventDefault();
-      $("#balance").empty();
+      $(".balance").empty();
       var credit = parseInt($("input#deposit").val()) || 0;
       var debit = parseInt($("input#withdraw").val()) || 0;
       account.withdraw(debit);
@@ -44,8 +45,9 @@ $(function() {
       }
       account.withdraw(29.95);
       $(".balance").text(account.balance);
+      $("#balance").show();
       $("input#deposit").val("");
-      $("input#withdrawal").val("");
+      $("input#withdraw").val("");
     });
 
     setInterval(function() {
