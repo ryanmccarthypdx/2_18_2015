@@ -5,3 +5,7 @@
 .pic {
   height: 386px;
 }
+
+.inactive-player {
+  background: gray;
+}

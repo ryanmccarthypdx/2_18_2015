@@ -4,7 +4,7 @@ describe('Account', function() {
       var testAccount = Object.create(Account);
       testAccount.deposit(500);
       testAccount.deposit(1);
-      expect(testAccount.balance).to.equal(501);
+      expect(testAccount.balance).to.equal("501.00");
     });
   });
 
@@ -13,7 +13,7 @@ describe('Account', function() {
       var testAccount = Object.create(Account);
       testAccount.deposit(500);
       testAccount.withdraw(250);
-      expect(testAccount.balance).to.equal(250);
+      expect(testAccount.balance).to.equal("250.00");
     });
   });
 
